@@ -23,7 +23,6 @@
 
 makeCacheMatrix <- function(x = matrix()) {
     # Assumption: input is a square, invertible matrix
-    print("makeCacheMatrix. testing my github push")
     
     # 1. initialize the matrix inverse
     x_inv = NULL
