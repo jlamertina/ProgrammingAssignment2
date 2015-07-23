@@ -23,26 +23,23 @@
 
 makeCacheMatrix <- function(x = matrix()) {
     # Assumption: input is a square, invertible matrix
+    print("makeCacheMatrix. testing my github push")
     
-    #print("Debug-1. initialize x_inv")
-    # initialize the matrix inverse
+    # 1. initialize the matrix inverse
     x_inv = NULL
     
-    #print("Debug-2. setX and getX")    
-    # set and get functions for the matrix
+    # 2. set and get functions for the matrix
     setX <- function(y) {
         x <<- y   # x is a var in the outer function, makeCacheMatrix, so we must use notation <<-
         x_inv <<- NULL  # we're setting new values for the matrix; so null the inverse
     }
     getX <- function() x
     
-    #print("Debug-3. setX_inv and getX_inv") 
-    # set and get functions for the matrix inverse
+    # 3. set and get functions for the matrix inverse
     setX_inv <- function(inverse) x_inv <<- inverse   
     getX_inv <- function() x_inv
     
-    #print("Debug-4. return a list") 
-    # construct and return a list by calling upon the four functions above
+    # 4. construct and return a list by calling upon the four functions above
     list(setX = setX, getX = getX, setX_inv = setX_inv, getX_inv = getX_inv)
 }
 
